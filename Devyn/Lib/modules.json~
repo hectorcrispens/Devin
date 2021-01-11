@@ -1,0 +1,53 @@
+{
+    "functions": [
+        {
+            "saludar": " Esta funcion recibe un parametro que lo muestra"
+        }, 
+        {
+            "presentar": " Funcion que presenta la herramienta al publico"
+        }, 
+        {
+            "modo": " Indica el modo de uso"
+        }
+    ], 
+    "modules": [
+        {
+            "nombre": "titoModule", 
+            "clase": "TitoModuleClass", 
+            "config": {
+                "comandos": [
+                    {
+                        "default": "False", 
+                        "dest": "presentar", 
+                        "command": [
+                            "--presentar"
+                        ], 
+                        "help": "Este comando hara la presentacion de la herramienta", 
+                        "action": "store_true"
+                    }, 
+                    {
+                        "help": "Este comando imprimira un saludo", 
+                        "dest": "saludar", 
+                        "nargs": 1, 
+                        "command": [
+                            "--saludo"
+                        ], 
+                        "action": "store", 
+                        "type": "string"
+                    }, 
+                    {
+                        "default": "False", 
+                        "dest": "modo", 
+                        "command": [
+                            "--modo"
+                        ], 
+                        "help": "Este comando nos introduce con el modo de uso", 
+                        "action": "store_true"
+                    }
+                ], 
+                "groupDescripcion": "Esta es una descripcion que indica el proposito dle modulo que vamos a instalar"
+            }, 
+            "archivo": "titoModuleFile"
+        }
+    ]
+}

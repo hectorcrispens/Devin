@@ -1,0 +1,87 @@
+import os
+class Modulo():
+    module = "{
+   \"comandos\": [
+        {
+            \"help\": \"Provee un modulo en blanco para la creacion de nuevas funcionalidades\", 
+            \"nargs\": 1,
+            \"type\": \"string\",
+            \"dest\": \"template\", 
+            \"command\": [
+                \"-t\", 
+                \"--template\"
+            ], 
+            \"action\": \"store\"
+        },
+	{
+            \"help\": \"Muestra un listado de las funciones y modulos instalados en el sistema\",
+            \"dest\": \"summary\", 
+            \"command\": [
+                \"-s\", 
+                \"--summary\"
+            ], 
+            \"action\": \"store_true\"
+        },
+        {
+            \"action\": \"store\", 
+            \"dest\": \"install\", 
+            \"nargs\": 1,
+            \"type\": \"string\", 
+            \"command\": [
+                \"-i\", 
+                \"--install\"
+            ], 
+            \"help\": \"Incorpora el modulo indicado en el path\"
+        },
+        {
+            \"action\": \"store\", 
+            \"dest\": \"uninstall\", 
+            \"nargs\": 1,
+            \"type\": \"string\", 
+            \"command\": [
+                \"-u\", 
+                \"--uninstall\"
+            ], 
+            \"help\": \"Desinstala un modulo de usuario, debe indicar el nombre\"
+        },
+        {
+            \"action\": \"store\", 
+            \"dest\": \"add\", 
+            \"nargs\": 1,
+            \"type\": \"string\", 
+            \"command\": [
+                \"-a\", 
+                \"--add\"
+            ], 
+            \"help\": \"Agrega el contenido del FILENAME a la lista de funciones globales\"
+        },
+        {
+            \"action\": \"store\", 
+            \"dest\": \"delete\", 
+            \"nargs\": 1,
+            \"type\": \"string\", 
+            \"command\": [
+                \"-d\", 
+                \"--delete\"
+            ], 
+            \"help\": \"Elimina una funcion o conjunto de funciones de la lista de funciones globales\"
+        },
+	{
+	    \"action\": \"store\",
+	    \"help\": \"Solo es una funciones para el test de argumentos\",
+	    \"dest\": \"testing\",
+	    \"nargs\": 4,
+	    \"type\": \"string\",
+	    \"command\": [
+		\"-q\",
+		\"--test\"
+	    ]
+	}
+
+    ], 
+    \"groupDescripcion\": \"Conjunto de operaciones determinada por el kernel de PyDarien\"
+}
+"
+    def get():
+        modules = json.loads(self.module)
+        return modules

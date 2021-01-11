@@ -1,0 +1,33 @@
+
+from Funciones.ApiContext import ApiContext
+from Funciones.Functions import *
+
+#@INITCONTEXT
+#--
+class TitoModuleClass(ApiContext):
+    def __init__(self):
+        self.args= None
+
+    def __call__(self, args):
+        self.apiArgs(self.args)
+        if args[0] == "presentar":
+            self.presentarModulo()
+        if args[0] == "saludar":
+            self.saludarModulo(args[1])
+        if args[0] == "modo":
+            self.modoModulo()
+
+    def presentarModulo(self):
+        presentar()
+
+    def saludarModulo(self, name):
+        saludar(name)
+
+    def modoModulo(self):
+        modo()
+
+    def hello(self, name):
+        print("hello world ", + name)
+        self.apiHello("titoModule")
+        functionHello("titoModuleFunctions")
+

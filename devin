@@ -1,0 +1,40 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+import optparse
+import json
+import ast
+import os
+from Devyn.kernel import Kernel
+from Devyn.Lib.Rollback import *
+
+def main()  :
+    parser = optparse.OptionParser()
+    location = os.path.dirname(__file__)
+    kernel = Kernel(location)
+    kernel.inicializeParser(parser)
+    kernel.inject(parser)
+
+    options, arguments = parser.parse_args()
+
+    #print(options)
+    string = str(options)
+    S = ast.literal_eval(string)
+    sigma=[]
+    if options.rollback:
+        Rollback.revert()
+
+    for x, y in S.items():
+        if y not in ['None', None, False, 'False'] and x not in ['rollback']:
+            sigma.append(x)
+    pares = kernel.pares()
+    N = kernel.N()
+    #printo(N)
+
+    
+    kernel.proyectar(sigma, pares, S, N)
+
+    
+    
+
+if __name__ == "__main__":
+    main()

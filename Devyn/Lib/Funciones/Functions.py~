@@ -1,0 +1,30 @@
+def functionHello(data):
+    print("function-------> %s" %data)
+
+#@ Esta funcion escupe una funcion
+def saludar(x, y):
+    print("Hola Yo soy el "+ x +" y te saludo a vos "+ y)
+#@ Esta otra hace un welcome
+def atacar(x, y):
+    print(x + "Es mucho mejor lenguaje de programacion que " + y)
+
+#@ Esta funcion escupe una funcion
+def saludar(x, y):
+    print("Hola Yo soy el "+ x +" y te saludo a vos "+ y)
+#@ Esta otra hace un welcome
+def atacar(x, y):
+    print(x + "Es mucho mejor lenguaje de programacion que " + y)
+
+def soltar():
+    print("soltar")
+
+#@ Esta funcion escupe una funcion
+def saludar(x, y):
+    print("Hola Yo soy el "+ x +" y te saludo a vos "+ y)
+#@ Esta otra hace un welcome
+def atacar(x, y):
+    print(x + "Es mucho mejor lenguaje de programacion que " + y)
+
+def soltar():
+    print("soltar")
+

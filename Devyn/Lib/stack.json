@@ -1,0 +1,44 @@
+{
+    "stack": [
+        {
+            "chain": "install", 
+            "section": "modules", 
+            "value": "titoModule", 
+            "path": "/home/hector/Desarrollo/PyDarien/Dash/Devyn/Lib/modules.json", 
+            "block": 0, 
+            "op": "pop"
+        }, 
+        {
+            "chain": "install", 
+            "section": "imports", 
+            "value": "titoModule", 
+            "path": "/home/hector/Desarrollo/PyDarien/Dash/Devyn/Lib/Context.py", 
+            "block": 1, 
+            "op": "pop"
+        }, 
+        {
+            "chain": "install", 
+            "section": "modules", 
+            "value": "titoModule", 
+            "path": "/home/hector/Desarrollo/PyDarien/Dash/Devyn/Lib/Context.py", 
+            "block": 1, 
+            "op": "pop"
+        }, 
+        {
+            "chain": "uninstall", 
+            "section": "modules", 
+            "value": "{\"nombre\": \"titoModule\", \"clase\": \"TitoModuleClass\", \"config\": {\"comandos\": [{\"help\": \"Hello World!!!\", \"default\": \"False\", \"nargs\": 2, \"dest\": \"hello\", \"command\": [\"--hello\"], \"action\": \"store_true\", \"type\": \"string\"}], \"imports\": [[\"Datetime\", \"TimeDelta\"], \"json\"], \"groupDescripcion\": \"user Descriptions\"}, \"archivo\": \"titoModuleFile\"}", 
+            "path": "/home/hector/Desarrollo/PyDarien/Dash/Devyn/Lib/modules.json", 
+            "block": 0, 
+            "op": "push"
+        }, 
+        {
+            "chain": "uninstall", 
+            "section": "imports", 
+            "value": "\n#(titoModule)\nimport os\nimport json\nimport re\nimport math\nimport ast, traceback\nfrom Funciones.ApiContext import ApiContext\nfrom Funciones.Functions import *\nfrom Colores import Color\nfrom modulo import Modulo\nfrom Rollback import Rollback, RollItem\nfrom smdt import Smdt, ObjSmdt\n", 
+            "path": "/home/hector/Desarrollo/PyDarien/Dash/Devyn/Lib/Context.py", 
+            "block": 1, 
+            "op": "push"
+        }
+    ]
+}
